@@ -5,3 +5,4 @@ if [ -z "$TEAMCITY_AGENT_NAME" ]; then
 fi
 
 echo "name=${TEAMCITY_AGENT_NAME}" >> $AGENT_DIR/conf/buildAgent.properties
+echo "ownAddress=${TEAMCITY_AGENT_OWN_IP}" >> $AGENT_DIR/conf/buildAgent.properties
