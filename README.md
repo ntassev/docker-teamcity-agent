@@ -7,7 +7,9 @@ Create the container:
 Put the init-script in place:
 
     sudo cp init-scripts/upstart/teamcity-agent.conf /etc/init/
+    
 or
+
     sudo cp init-scripts/systemd/teamcity-agent.service /lib/systemd/system/
     
 Start the container:
