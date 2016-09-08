@@ -1,4 +1,4 @@
-FROM sjoerdmulder/teamcity-agent
+  FROM sjoerdmulder/teamcity-agent
 
 MAINTAINER "Nikola Tassev" <ntassev@gmail.com>
 
@@ -22,11 +22,3 @@ RUN wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.zip \
     && rm google-cloud-sdk.zip \
     && HOME=/home/teamcity google-cloud-sdk/install.sh --usage-reporting=true --path-update=true --bash-completion=true --rc-path=/home/teamcity/.bashrc --disable-installation-options \
     && HOME=/home/teamcity ./google-cloud-sdk/bin/gcloud components update app 
-
-USER root
-WORKDIR /
-
-RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash - \
-    && apt-get install -y nodejs \
-    && npm install -g grunt-cli \
-    && npm install -g bower
